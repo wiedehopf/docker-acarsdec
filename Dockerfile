@@ -55,8 +55,9 @@ RUN set -x && \
   #git clone --depth 1 --single-branch --branch master https://github.com/TLeconte/acarsdec /src/acarsdec && \
   #git clone --depth 1 --single-branch --branch master https://github.com/wiedehopf/acarsdec.git /src/acarsdec && \
   #git clone --depth 1 --single-branch --branch master https://github.com/fredclausen/acarsdec.git /src/acarsdec && \
-  git clone --depth 1 --single-branch --branch master https://github.com/f00b4r0/acarsdec.git /src/acarsdec && \
+  git clone --depth 20 --single-branch --branch master https://github.com/f00b4r0/acarsdec.git /src/acarsdec && \
   pushd /src/acarsdec && \
+  git reset --hard 34be82b && \
   #git checkout master && \
   #git checkout testing && \
   sed -i -e 's/-march=native//' CMakeLists.txt && \
